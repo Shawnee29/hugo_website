@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}"
+<head>
+			<title>{{ .Title }} | {{ .Site.Title }}</title>
+</head>
+<body>
+	<header>
+		<h1>{{ .Site.Title }}</h1>
+		<nav>
+			<a href="/">Home</a>
+			<a href="/blog">Blog</a>
+			<a href="/products">Products</a>
+		</nav>
+
+	</header>
+		<main>
+			{{block "main" . }}{{ end }}
+
+		</main>
+
+			<footer>
+				&copy; {{ .Site.Title }} {{ now.Year}}
+
+			</footer>
+
+</body>
+
+</html>
